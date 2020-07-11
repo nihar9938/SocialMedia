@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .forms import *
 from django.db.models import Q
-from socialmedia.tasks import Sendmail  ##Used for celery implementation
-
 
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import get_template
