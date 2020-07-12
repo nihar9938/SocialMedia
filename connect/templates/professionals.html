@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 {% block body %}
 
@@ -39,7 +38,7 @@
                 {% if what == "myreceived" %}
                     <li class="filter" ><a class="selected" href="{% url 'professional' 'myreceived' %}">Requests ({{ con_request.count }})</a></li>
                 {% else %}
-                    <<li class="filter" ><a href="{% url 'professional' 'myreceived' %}">Requests ({{ con_request.count }})</a></li>
+                    <li class="filter" ><a href="{% url 'professional' 'myreceived' %}">Requests ({{ con_request.count }})</a></li>
                 {% endif %}
 
                 {% if what == "Sent" %}
@@ -98,6 +97,9 @@
               </div>
             </div>
           </div>
+
+
+
           <section class="cd-gallery">
             <ul>
             {% if what == "all" %}
@@ -191,32 +193,6 @@
       </section>
     </main>
 
-
-
-    <!-- ABOUT -->
-    <section class="bg-white">
-      <!-- Right Background -->
-      <div class="main-page-section half_left_layout">
-        <div class="main-half-layout half_right_layout"> </div>
-
-        <!-- Left Content -->
-        <div class="main-half-layout-container half_right_layout">
-          <div class="about-us-con">
-            <h3>Collaborate on a project</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nibh dolor, efficitur eget pharetra ac, cursus sed sapien. Cras posuere ligula ut blandit varius. </p>
-            <ul class="count-info row">
-              <li class="col"> <span class="counter">5000</span><span>+</span>
-                <p>Collaboration</p>
-              </li>
-              <li class="col"> <span class="counter">750</span><span>+</span>
-                <p>Projects</p>
-              </li>
-            </ul>
-            <a href="#." class="btn">Find a Jobs</a> </div>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </section>
   </div>
 
     {% endblock %}

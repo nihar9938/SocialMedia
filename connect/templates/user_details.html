@@ -21,39 +21,28 @@
                   <div class="pro-avatar"> <img src="{{ profile.image.url }}" alt="" class="img-responsive" style="height:340px;border-radius:30%;"> </div>
                   <h1>{{ profile.name }}
                     {% if  profile.usr.username == request.user.username %}
-                       {% if not request.user.company_model_set.all %}
+
                           <a href="{% url 'addCompany' %}" class="margin-right-0" data-toggle="tooltip" data-placement="top" title="Add Your Company" style="color:red;"><i  class="fa fa-plus-circle"></i> </a>
-                      {% endif %}
+
                     {% endif %}
 
                     <a class="veri" href="#." data-toggle="tooltip" data-placement="top" title="Verified Member"> <i class="fa fa-check"></i> </a> </h1>
                   <h6>{{ profile.profile_title }}</h6>
-                  <div class="social-links"> <a href="#."><i class="fab fa-facebook-f"></i></a>
-                    <a href="#."><i class="fab fa-twitter"></i></a>
-                    <a href="#."><i class="fab fa-google"></i></a>
-                    <a href="#."><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#."><i class="far fa-bookmark"></i> </a>
-                    <a href="#."><i class="far fa-envelope"></i> </a>
+                  <div class="social-links"> <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.gmail.com"><i class="fab fa-google"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
                     {% if request.user.username != profile.usr.username %}
                       {% if connection %}
-                        <a class="float-right margin-right-0" data-toggle="tooltip" data-placement="top" title="Pending" style="color:red;"><i  class="fa fa-exclamation"></i> </a>
+                        <a  class="float-right margin-right-0" data-toggle="tooltip" data-placement="top" title="Followed" style="color:red;"><i  class="fa fa-user-plus"></i> </a>
                       {% else %}
-                        <a href="{% url 'connections' 'Send_Request' profile.id %}" class="float-right margin-right-0" data-toggle="tooltip" data-placement="top" title="Send Request"><i class="fa fa-exclamation"></i> </a>
+                        <a href="{% url 'connections' 'Send_Request' profile.id %}" class="float-right margin-right-0" data-toggle="tooltip" data-placement="top" title="Send Request"><i class="fa fa-user-plus"></i> </a>
                       {% endif %}
                     {% endif %}
                   </div>
 
                   <!-- Followers -->
-                  <div class="followr">
-                    <ul class="row">
-                      <li class="col-sm-6">
-                        <p>Followers <span>(512)</span></p>
-                      </li>
-                      <li class="col-sm-6">
-                        <p>Following <span>(1874)</span></p>
-                      </li>
-                    </ul>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -63,7 +52,7 @@
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
-                <h6><a class="close" href="professional-details.html#." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> Send Message</h6>
+                <h6><a class="close" href=" #." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> Send Message</h6>
                 <!-- Forms -->
                 <form action="#">
                   <ul class="row">
@@ -103,10 +92,10 @@
                 <li><a class="nav-link" data-toggle="tab" href="#contact" role="tab" aria-selected="true">New Post</a> </li>
               {% endif %}
               <li><a class="nav-link" data-toggle="tab" href="#portfolio" role="tab" aria-selected="true">Portfolio</a> </li>
-              <li><a class="nav-link" data-toggle="tab" href="#services" role="tab" aria-selected="true">Contact</a> </li>
-              <li><a class="nav-link" data-toggle="tab" href="#support" role="tab" aria-selected="true">Support</a> </li>
-              <li><a class="nav-link" data-toggle="tab" href="#folow" role="tab" aria-selected="true">Followers<small>(6)</small></a> </li>
-              <li><a class="nav-link" data-toggle="tab" href="#folowng" role="tab" aria-selected="true">Following<small>(120)</small></a> </li>
+              <li><a class="nav-link" data-toggle="tab" href="#services" role="tab" aria-selected="true">Services</a> </li>
+<!--              <li><a class="nav-link" data-toggle="tab" href="#support" role="tab" aria-selected="true">Support</a> </li>-->
+<!--              <li><a class="nav-link" data-toggle="tab" href="#folow" role="tab" aria-selected="true">Followers<small>(6)</small></a> </li>-->
+<!--              <li><a class="nav-link" data-toggle="tab" href="#folowng" role="tab" aria-selected="true">Following<small>(120)</small></a> </li>-->
             </ul>
             <div class="row">
               <!-- SIDE BAR -->
@@ -133,9 +122,9 @@
                             <li>
                               <h6 class="title">Name</h6>
                               <span class="subtitle">{{ profile.name }}</span> </li>
-                            <li>
-                              <h6 class="title">Age</h6>
-                              <span class="subtitle">23 Years</span> </li>
+<!--                            <li>-->
+<!--                              <h6 class="title">Date of Birth</h6>-->
+<!--                              <span class="subtitle">{{ form.dob }}</span> </li>-->
                             {% if profile.location %}
                               <li>
                                 <h6 class="title">Location</h6>
@@ -246,7 +235,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Web Design</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="professional-details.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
 
@@ -257,7 +246,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Motion Graphic</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="professional-details.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
 
@@ -268,7 +257,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Branding Design</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="professional-details.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
 
@@ -279,7 +268,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Google Sell</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="professional-details.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
 
@@ -290,7 +279,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Motion Graphic</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="professional-details.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
 
@@ -301,7 +290,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Branding Design</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="professional-details.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
                         </div>
@@ -320,13 +309,13 @@
 
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design">
-                            <div class="portfolio-image"> <a href="professional-details.html#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-1.jpg' %}"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-1.jpg' %}"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="professional-details.html#.">Fashion / trending</a></span> <a href="professional-details.html#." class="go"><i class="fa fa-search"></i></a> <a href="professional-details.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href="#">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -334,13 +323,13 @@
 
                           <!-- ITEM -->
                           <article class="portfolio-item pf-photography pf-branding-design">
-                            <div class="portfolio-image"> <a href="professional-details.html#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-2.jpg' %}"> </a>
+                            <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-2.jpg' %}"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="professional-details.html#.">Fashion / trending</a></span> <a href="professional-details.html#." class="go"><i class="fa fa-search"></i></a> <a href="professional-details.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href="#">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -348,13 +337,13 @@
 
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design pf-branding-design">
-                            <div class="portfolio-image"> <a href="professional-details.html#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-3.jpg' %}"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-3.jpg' %}"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="professional-details.html#.">Fashion / trending</a></span> <a href="professional-details.html#." class="go"><i class="fa fa-search"></i></a> <a href="professional-details.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -362,13 +351,13 @@
 
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design pf-digital-art ">
-                            <div class="portfolio-image"> <a href="professional-details.html#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-4.jpg' %}"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-4.jpg' %}"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="professional-details.html#.">Fashion / trending</a></span> <a href="professional-details.html#." class="go"><i class="fa fa-search"></i></a> <a href="professional-details.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -376,13 +365,13 @@
 
                           <!-- ITEM -->
                           <article class="portfolio-item pf-branding-design pf-digital-art">
-                            <div class="portfolio-image"> <a href="professional-details.html#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-5.jpg' %}"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-5.jpg' %}"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="professional-details.html#.">Fashion / trending</a></span> <a href="professional-details.html#." class="go"><i class="fa fa-search"></i></a> <a href="professional-details.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -390,13 +379,13 @@
 
                           <!-- ITEM -->
                           <article class="portfolio-item pf-design pf-digital-art">
-                            <div class="portfolio-image"> <a href="professional-details.html#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-9.jpg' %}"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-9.jpg' %}"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="professional-details.html#.">Fashion / trending</a></span> <a href="professional-details.html#." class="go"><i class="fa fa-search"></i></a> <a href="professional-details.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -404,13 +393,13 @@
 
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design pf-branding-design">
-                            <div class="portfolio-image"> <a href="professional-details.html#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-7.jpg' %}"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-7.jpg' %}"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="professional-details.html#.">Fashion / trending</a></span> <a href="professional-details.html#." class="go"><i class="fa fa-search"></i></a> <a href="professional-details.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -418,13 +407,13 @@
 
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design pf-digital-art ">
-                            <div class="portfolio-image"> <a href="professional-details.html#."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-8.jpg' %}"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="{%  static 'images/img-8.jpg' %}"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="professional-details.html#.">Fashion / trending</a></span> <a href="professional-details.html#." class="go"><i class="fa fa-search"></i></a> <a href="professional-details.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -489,7 +478,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
 
                             <!-- Follows -->
@@ -498,7 +487,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
 
                             <!-- Follows -->
@@ -507,7 +496,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Follow</a></div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a></div>
                             </li>
 
                             <!-- Follows -->
@@ -516,7 +505,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
 
                             <!-- Follows -->
@@ -525,7 +514,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
 
                             <!-- Follows -->
@@ -534,7 +523,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
                           </ul>
                         </div>
@@ -557,7 +546,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
 
                             <!-- Following -->
@@ -566,7 +555,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
 
                             <!-- Following -->
@@ -575,7 +564,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
 
                             <!-- Following -->
@@ -584,7 +573,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
 
                             <!-- Following -->
@@ -593,7 +582,7 @@
                                 <div class="thumb"> <img src="{%  static 'images/comp-img.png' %}" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="professional-details.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
                           </ul>
                         </div>
@@ -614,7 +603,7 @@
 
         <!-- Heading Block -->
         <div class="heading-block text-center">
-          <h2>Review About Muhammad Adnan Arif</h2>
+          <h2>Review About {{ profile.name }}</h2>
         </div>
 
         <!-- Testimonial Style 4 -->
@@ -626,12 +615,12 @@
               <!-- Slides -->
               <div>
                 <!-- Avatar -->
-                <div class="avatar"><img class="img-circle img-responsive" src="{%  static 'images/testimonial-2a.png' %}" alt=" "></div>
+                <div class="avatar"><img class="img-circle img-responsive" src="{%  static 'images/rakesh.jpg' %}" alt=" "></div>
                 <div class="text-in">
                   <p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
                     or randomised words which don't look even slightly believable.” </p>
-                  <h6>WHITE SHADOW WALKER</h6>
-                  <span> CEO/FOUNDER DELL</span>
+                  <h6>RAKESH BHOL</h6>
+                  <span> CEO/FOUNDER </span>
                   <!-- Stars -->
                   <div class="rating-stars"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></div>
                 </div>
@@ -640,28 +629,18 @@
               <!-- Slides -->
               <div>
                 <!-- Avatar -->
-                <div class="avatar"><img class="img-circle img-responsive" src="{%  static 'images/testimonial-2b.png' %}" alt=" "></div>
+                <div class="avatar"><img class="img-circle img-responsive" src="{%  static 'images/prateek.jpg' %}" alt=" "></div>
                 <div class="text-in">
                   <p>“There are many variations  but the majority have suffered alteration. but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”</p>
-                  <h6>M_ADNAN</h6>
-                  <span> CEO/FOUNDER DELL</span>
+                  <h6>PRATEEK MISHRA</h6>
+                  <span> CEO/FOUNDER</span>
                   <!-- Stars -->
                   <div class="rating-stars"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></div>
                 </div>
               </div>
 
               <!-- Slides 1 -->
-              <div>
-                <!-- Avatar -->
-                <div class="avatar"><img class="img-circle img-responsive" src="{%  static 'images/testimonial-2c.png' %}" alt=" "></div>
-                <div class="text-in">
-                  <p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, Alteration in some form randomised words which don't look even slightly believable.”</p>
-                  <h6>DAVID WALKER</h6>
-                  <span> CEO/FOUNDER DELL</span>
-                  <!-- Stars -->
-                  <div class="rating-stars"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

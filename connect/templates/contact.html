@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block body%}
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Banner -->
+    <section class="sub-bnr">
+      <div class="container">
+        <h2>Get in connect with us</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    
+    <!-- Contact Info -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 padding-0">
+            <div class="contact-info"> <h3 style="color:red;"><b>Developed By:</b></h3><span class="h4">Nihar Ranjan Mishra,</span>
+              <ul>
+                <li> <a href="#.">+91 7008117084 </a> </li>
+                <li> <a href="#.">+91 9040208743</a> </li>
+                <li> <a href="#.">niharmishra11@gmail.com </a> </li>
+                <li>
+                  <p>178 VSS Nagar, Bhubaneswar Odisha 751006 India</p>
+                </li>
+              </ul>
+              
+              <!-- Social Icon -->
+              <div class="social-icon"> <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a> <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a> <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a> <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a> </div>
+            </div>
+          </div>
+          
+          <!-- Map -->
+          <div class="col-lg-6 padding-0" style="backgroud-color:white;">
+            <div class="map-block">
+                  <img src="{% static 'images/nihar.jpg' %}" style="height:350px;width:350px;margin:150px;border-radius:25%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+{% endblock %}

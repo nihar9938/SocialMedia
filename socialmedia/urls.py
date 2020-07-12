@@ -27,12 +27,14 @@ urlpatterns = [
     path('Register/',Register,name="register"),
     path('in/<str:Username>/',UserProfile,name="UserProfile"),
     path('in/Edit/<str:Username>/', Update_User_Details, name = "UpdateUserProfile"),
+    path('all_companies',Companies,name="companies"),
+    path('contact/',Contact,name="contact"),
 
 
     path('all_professionals/<str:what>/',All_Profession,name="professional"),
     path('connection/<str:action>/<int:u_id>/',Manage_your_connections, name="connections"),
     path('add_company/', Add_Company, name = "addCompany"),
-    path('your_company_details/', CompanyDetails, name = "CompanyDetails"),
+    path('company_details/<int:c_id>', CompanyDetails, name = "CompanyDetails"),
     path('post_new_blog/', NewPost, name = "post"),
     path('likes/<int:b_id>/<str:Username>/', Like_By_Me, name = "likes")
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -4,10 +4,11 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from .forms import *
 from django.db.models import Q
-
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import get_template
 from django.conf import settings
+
+
 def Sendmailold(email, msg):
     from_email = settings.EMAIL_HOST_USER
     to_email = [email]
@@ -16,10 +17,12 @@ def Sendmailold(email, msg):
     sub = "Thank you For your Registration on Social on"
     send_mail(sub, " ", from_email, to_email, html_message=html)
 
+
 def Front(request):
+    if request.user.is_authenticated:
+       return redirect("UserProfile",request.user.username)
     companies=""
     companies = Company_Model.objects.all()
-    print(companies)
     Dict= {
         "data":companies
     }
@@ -44,6 +47,8 @@ def Login(request):
         }
     return render(request,'login_register.html',Dict)
 
+
+
 def Register(request):
     if request.method == "POST":
         form = AddUser_Form(request.POST,request.FILES)
@@ -65,7 +70,8 @@ def Register(request):
 
 def Logout(request):
     logout(request)
-    return redirect("login")
+    return redirect("front")
+
 
 def UserProfile(request,Username):
     if not request.user.is_authenticated:
@@ -97,6 +103,7 @@ def UserProfile(request,Username):
     }
     return render(request,"user_details.html",Dict)
 
+
 def Update_User_Details(request, Username):
     if not request.user.is_authenticated:
         return redirect("login")
@@ -118,10 +125,6 @@ def Update_User_Details(request, Username):
         "Profile": User_Detail, "form":form
     }
     return render(request, "Update_User_Details.html", Dict)
-
-
-
-
 
 
 
@@ -174,10 +177,6 @@ def All_Profession(request, what):
 
 
 
-
-
-
-
 def Manage_your_connections(request,action,u_id):
     if not request.user.is_authenticated:
         return redirect("login")
@@ -202,6 +201,7 @@ def Manage_your_connections(request,action,u_id):
         return redirect("professional", "all")
     return HttpResponse("you want" + str(action) +"for user" + str(u_id))
 
+
 def Add_Company(request):
     if not request.user.is_authenticated:
         return redirect("login")
@@ -219,22 +219,29 @@ def Add_Company(request):
             data.usr = request.user
             data.save()
             return redirect("login")
-
     Dict = {
         "form":form
     }
     return render(request, "add_company.html", Dict)
 
-def CompanyDetails(request):
+def Companies(request):
+    if not request.user.is_authenticated:
+        return redirect("login")
+    companies = Company_Model.objects.all()
+    Dict = {
+        "companies":companies
+    }
+    return render(request,"companies.html",Dict)
+
+
+def CompanyDetails(request,c_id):
     if not request.user.is_authenticated:
         return redirect("login")
 
-    usr = request.user
-    company = Company_Model.objects.filter(usr = usr)
-    print(company)
+    company = Company_Model.objects.get(id = c_id)
     if not company:
-        return redirect("login")
-
+        return redirect("companies")
+    print(company)
     Dict = {
         "company":company
     }
@@ -258,3 +265,6 @@ def Like_By_Me(request, b_id, Username):
     blog = Blogs_Model.objects.get(id=b_id)
     BlogLikes.objects.create(usr=request.user, blog=blog)
     return redirect("UserProfile", Username)
+
+def Contact(request):
+    return render(request,"contact.html")

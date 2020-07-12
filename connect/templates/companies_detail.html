@@ -1,12 +1,7 @@
 {% extends 'base.html' %}
-
 {% load static %}
-
-
-
 {% block body %}
-  <div id="content"> 
-    
+  <div id="content">
     <!-- Papular Companies -->
     <section class="padding-bottom-100">
       <div class="compny-profile"> 
@@ -18,21 +13,11 @@
             <div class="user-info">
               <div class="col-left">
                 <div class="user-in">
-                  <h1>{{ company.first.name }}. <a class="veri" href="companies-detail.html#." data-toggle="tooltip" data-placement="top" title="Verified"> <i class="fa fa-check"></i> </a> </h1>
-                  <h6>{{ company.first.title}}</h6>
-                  <p>{{ company.first.address }} ( <a target="_blank" href="https://goo.gl/maps/z6o9C4rucBTntUtR8">View Location</a> )</p>
+                  <h1>{{ company.name }}. <a class="veri" href=" #." data-toggle="tooltip" data-placement="top" title="Verified"> <i class="fa fa-check"></i> </a> </h1>
+                  <h6>{{ company.title}}</h6>
+                  <p>{{ company.address }} ( <a target="_blank" href="https://goo.gl/maps/z6o9C4rucBTntUtR8">View Location</a> )</p>
                   
                   <!-- Followers -->
-                  <div class="followr">
-                    <ul class="row">
-                      <li class="col-sm-6">
-                        <p>Followers <span>(512)</span></p>
-                      </li>
-                      <li class="col-sm-6">
-                        <p>Following <span>(1874)</span></p>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
               
@@ -40,12 +25,13 @@
               <div class="col-left">
                 <div class="user-in">
                   <div class="right-top-bnr">
-                    <div class="connect"> <a href="companies-detail.html#." data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Contact Company</a> <a href="companies-detail.html#."><i class="fa fa-user-plus"></i> Follow</a> </div>
+                    <div class="connect"> <a href=" #." data-toggle="modal" data-target="#myModal"><i class="fa fa-user-plus"></i> Contact Company</a> <a href=" #."><i class="fa fa-user-plus"></i> Follow</a> </div>
                   </div>
                   
                   <!-- Social Icon -->
-                  <div class="social-links"> <a href="companies-detail.html#."><i class="fab fa-facebook-f"></i></a> <a href="companies-detail.html#."><i class="fab fa-twitter"></i></a> <a href="companies-detail.html#."><i class="fab fa-google"></i></a> <a href="companies-detail.html#."><i class="fab fa-linkedin-in"></i></a> <a href="companies-detail.html#."><i class="far fa-bookmark"></i> </a> <a href="companies-detail.html#."><i class="far fa-envelope"></i> </a> <a href="companies-detail.html#." class="float-right margin-right-0" data-toggle="tooltip" data-placement="top" title="Reports"><i class="fa fa-exclamation"></i> </a> </div>
-                  
+                  <div class="social-links"> <a href=" #."><i class="fab fa-facebook-f"></i></a> <a href=" #."><i class="fab fa-twitter"></i></a> <a href=" #."><i class="fab fa-google"></i></a> <a href=" #."><i class="fab fa-linkedin-in"></i></a> <a href=" #."><i class="far fa-bookmark"></i> </a> <a href=" #."><i class="far fa-envelope"></i> </a>  </div>
+                  </div>
+
                   <!-- Stars -->
                   <ul class="row">
                     <li class="col-sm-6">
@@ -64,7 +50,7 @@
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
-                <h6><a class="close" href="companies-detail.html#." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> Send Message</h6>
+                <h6><a class="close" href=" #." data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a> Send Message</h6>
                 <!-- Forms -->
                 <form action="#">
                   <ul class="row">
@@ -101,14 +87,14 @@
             <div class="navi-sticky">
               <div class="sticky">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
-                  <li><a class="nav-link active" data-toggle="tab" href="companies-detail.html#about" role="tab" aria-selected="true">About</a> </li>
-                  <li><a class="nav-link" data-toggle="tab" href="companies-detail.html#services" role="tab" aria-selected="true">Services</a> </li>
-                  <li><a class="nav-link" data-toggle="tab" href="companies-detail.html#portfolio" role="tab" aria-selected="true">Portfolio</a> </li>
-                  <li><a class="nav-link" data-toggle="tab" href="companies-detail.html#jobs" role="tab" aria-selected="true">Jobs</a> </li>
-                  <li><a class="nav-link" data-toggle="tab" href="companies-detail.html#contact" role="tab" aria-selected="true">Contact</a> </li>
-                  <li><a class="nav-link" data-toggle="tab" href="companies-detail.html#support" role="tab" aria-selected="true">Support</a> </li>
-                  <li><a class="nav-link" data-toggle="tab" href="companies-detail.html#folow" role="tab" aria-selected="true">Followers<small>(6)</small></a> </li>
-                  <li><a class="nav-link" data-toggle="tab" href="companies-detail.html#folowng" role="tab" aria-selected="true">Following<small>(120)</small></a> </li>
+                  <li><a class="nav-link active" data-toggle="tab" href=" #about" role="tab" aria-selected="true">About</a> </li>
+<!--                  <li><a class="nav-link" data-toggle="tab" href=" #services" role="tab" aria-selected="true">Services</a> </li>-->
+<!--                  <li><a class="nav-link" data-toggle="tab" href=" #portfolio" role="tab" aria-selected="true">Portfolio</a> </li>-->
+<!--                  <li><a class="nav-link" data-toggle="tab" href=" #jobs" role="tab" aria-selected="true">Jobs</a> </li>-->
+<!--                  <li><a class="nav-link" data-toggle="tab" href=" #contact" role="tab" aria-selected="true">Contact</a> </li>-->
+<!--                  <li><a class="nav-link" data-toggle="tab" href=" #support" role="tab" aria-selected="true">Support</a> </li>-->
+<!--                  <li><a class="nav-link" data-toggle="tab" href=" #folow" role="tab" aria-selected="true">Followers<small>(6)</small></a> </li>-->
+<!--                  <li><a class="nav-link" data-toggle="tab" href=" #folowng" role="tab" aria-selected="true">Following<small>(120)</small></a> </li>-->
                 </ul>
               </div>
             </div>
@@ -138,10 +124,10 @@
                               <span class="subtitle">Information Technology</span> </li>
                             <li>
                               <h6 class="title">Location</h6>
-                              <span class="subtitle">Melbourne, Australia</span> </li>
+                              <span class="subtitle">{{ company.address }}/span> </li>
                             <li>
                               <h6 class="title">Employees</h6>
-                              <span class="subtitle">21,245</span> </li>
+                              <span class="subtitle">245</span> </li>
                             <li>
                               <h6 class="title">Legal Entity</h6>
                               <span class="subtitle">Gesselschaft</span> </li>
@@ -153,11 +139,11 @@
                               <span class="subtitle">10:00 AM - 5:00 PM</span> </li>
                             <li>
                               <h6 class="title">Contacts</h6>
-                              <div class="subtitle"><a href="companies-detail.html#.">example@example.com</a> </div>
+                              <div class="subtitle"><a href=" #.">{{company.email}}</a> </div>
                             </li>
                             <li>
                               <h6 class="title">Website</h6>
-                              <div class="subtitle"> <a href="https://webicode.com" target="_blank">https://webicode.com</a> </div>
+                              <div class="subtitle"> <a href="#" target="_blank">{{company.website}}</a> </div>
                             </li>
                           </ul>
                         </div>
@@ -208,20 +194,7 @@
                     <div class="profile-main">
                       <h3>About the Company</h3>
                       <div class="profile-in">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus 
-                          similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque. </p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat 
-                          accusamus nemoitate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid 
-                          laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum
-                          assumenda.</p>
-                        <!-- Video -->
-                        <iframe class="margin-bottom-30" src="https://www.youtube.com/embed/uVju5--RqtY"></iframe>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, maxime, excepturi, mollitia, voluptatibus 
-                          similique aliquidautem laudantium sapiente ad enim ipsa modi labo rum accusantium deleniti neque. </p>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nihil, dolores, culpa ullam vero ipsum placeat 
-                          accusamus nemoitate id molestiae consectetur quae pariatur repudi andae vel ex quaerat nam iusto aliquid 
-                          laborum quia adipisci aut ut imcati nisi deleniti tempore maxime sequi fugit reiciendis libero quo. Rerum
-                          assumenda.</p>
+                          {{ company.title }}
                       </div>
                     </div>
                   </div>
@@ -240,7 +213,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Web Design</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="companies-detail.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
                           
@@ -251,7 +224,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Motion Graphic</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="companies-detail.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
                           
@@ -262,7 +235,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Branding Design</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="companies-detail.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
                           
@@ -273,7 +246,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Google Sell</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="companies-detail.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
                           
@@ -284,7 +257,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Motion Graphic</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="companies-detail.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
                           
@@ -295,7 +268,7 @@
                               <div class="ib-info">
                                 <h4 class="h6">Branding Design</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
-                                <a href="companies-detail.html#">Contact Now </a> </div>
+                                <a href=" #">Contact Now </a> </div>
                             </div>
                           </div>
                         </div>
@@ -314,13 +287,13 @@
                           
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design">
-                            <div class="portfolio-image"> <a href="companies-detail.html#."> <img class="img-responsive" alt="Open Imagination" src="images/img-1.jpg"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="images/img-1.jpg"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="companies-detail.html#.">Fashion / trending</a></span> <a href="companies-detail.html#." class="go"><i class="fa fa-search"></i></a> <a href="companies-detail.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -328,13 +301,13 @@
                           
                           <!-- ITEM -->
                           <article class="portfolio-item pf-photography pf-branding-design">
-                            <div class="portfolio-image"> <a href="companies-detail.html#."> <img class="img-responsive" alt="Open Imagination" src="images/img-2.jpg"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="images/img-2.jpg"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="companies-detail.html#.">Fashion / trending</a></span> <a href="companies-detail.html#." class="go"><i class="fa fa-search"></i></a> <a href="companies-detail.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -342,13 +315,13 @@
                           
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design pf-branding-design">
-                            <div class="portfolio-image"> <a href="companies-detail.html#."> <img class="img-responsive" alt="Open Imagination" src="images/img-3.jpg"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="images/img-3.jpg"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="companies-detail.html#.">Fashion / trending</a></span> <a href="companies-detail.html#." class="go"><i class="fa fa-search"></i></a> <a href="companies-detail.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -356,13 +329,13 @@
                           
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design pf-digital-art ">
-                            <div class="portfolio-image"> <a href="companies-detail.html#."> <img class="img-responsive" alt="Open Imagination" src="images/img-4.jpg"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="images/img-4.jpg"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="companies-detail.html#.">Fashion / trending</a></span> <a href="companies-detail.html#." class="go"><i class="fa fa-search"></i></a> <a href="companies-detail.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -370,13 +343,13 @@
                           
                           <!-- ITEM -->
                           <article class="portfolio-item pf-branding-design pf-digital-art">
-                            <div class="portfolio-image"> <a href="companies-detail.html#."> <img class="img-responsive" alt="Open Imagination" src="images/img-5.jpg"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="images/img-5.jpg"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="companies-detail.html#.">Fashion / trending</a></span> <a href="companies-detail.html#." class="go"><i class="fa fa-search"></i></a> <a href="companies-detail.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -384,13 +357,13 @@
                           
                           <!-- ITEM -->
                           <article class="portfolio-item pf-design pf-digital-art">
-                            <div class="portfolio-image"> <a href="companies-detail.html#."> <img class="img-responsive" alt="Open Imagination" src="images/img-9.jpg"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="images/img-9.jpg"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="companies-detail.html#.">Fashion / trending</a></span> <a href="companies-detail.html#." class="go"><i class="fa fa-search"></i></a> <a href="companies-detail.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -398,13 +371,13 @@
                           
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design pf-branding-design">
-                            <div class="portfolio-image"> <a href="companies-detail.html#."> <img class="img-responsive" alt="Open Imagination" src="images/img-7.jpg"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="images/img-7.jpg"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="companies-detail.html#.">Fashion / trending</a></span> <a href="companies-detail.html#." class="go"><i class="fa fa-search"></i></a> <a href="companies-detail.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -412,13 +385,13 @@
                           
                           <!-- ITEM -->
                           <article class="portfolio-item pf-web-design pf-digital-art ">
-                            <div class="portfolio-image"> <a href="companies-detail.html#."> <img class="img-responsive" alt="Open Imagination" src="images/img-8.jpg"> </a>
+                            <div class="portfolio-image"> <a href=" #."> <img class="img-responsive" alt="Open Imagination" src="images/img-8.jpg"> </a>
                               <div class="portfolio-overlay style-4">
                                 <div class="detail-info">
                                   <div class="position-center-center">
                                     <h3 class="no-margin">Assembly Branding</h3>
                                     <hr class="balck">
-                                    <span><a href="companies-detail.html#.">Fashion / trending</a></span> <a href="companies-detail.html#." class="go"><i class="fa fa-search"></i></a> <a href="companies-detail.html#." class="go"><i class="fa fa-link"></i></a> </div>
+                                    <span><a href=" #.">Fashion / trending</a></span> <a href=" #." class="go"><i class="fa fa-search"></i></a> <a href=" #." class="go"><i class="fa fa-link"></i></a> </div>
                                 </div>
                               </div>
                             </div>
@@ -446,7 +419,7 @@
                         <!-- Job Board Companies -->
                         <div class="listing-ver-3">
                           <div class="listing-heading">
-                            <h5><a href="companies-detail.html#.">php Developer</a></h5>
+                            <h5><a href=" #.">php Developer</a></h5>
                           </div>
                           <div class="listing-inner">
                             <div class="listing-content">
@@ -454,7 +427,7 @@
                               <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"><i class="fa fa-clock-o"></i> Full Time </span> <span class="type-work full-time"><i class="fa fa-clock-o"></i> 6 hours ago</span> 
                               
                               <!-- Apply Now -->
-                              <div class="aply"> <a href="companies-detail.html#." class="btn">Apply Now</a> </div>
+                              <div class="aply"> <a href=" #." class="btn">Apply Now</a> </div>
                             </div>
                           </div>
                         </div>
@@ -462,7 +435,7 @@
                         <!-- Job Board Companies -->
                         <div class="listing-ver-3">
                           <div class="listing-heading">
-                            <h5><a href="companies-detail.html#.">Responsive Web Designer</a></h5>
+                            <h5><a href=" #.">Responsive Web Designer</a></h5>
                           </div>
                           <div class="listing-inner">
                             <div class="listing-content">
@@ -470,7 +443,7 @@
                               <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"><i class="fa fa-clock-o"></i> Full Time </span> <span class="type-work full-time"><i class="fa fa-clock-o"></i> 6 hours ago</span> 
                               
                               <!-- Apply Now -->
-                              <div class="aply"> <a href="companies-detail.html#." class="btn">Apply Now</a> </div>
+                              <div class="aply"> <a href=" #." class="btn">Apply Now</a> </div>
                             </div>
                           </div>
                         </div>
@@ -478,7 +451,7 @@
                         <!-- Job Board Companies -->
                         <div class="listing-ver-3">
                           <div class="listing-heading">
-                            <h5><a href="companies-detail.html#.">Front-End Web Developer</a></h5>
+                            <h5><a href=" #.">Front-End Web Developer</a></h5>
                           </div>
                           <div class="listing-inner">
                             <div class="listing-content">
@@ -486,7 +459,7 @@
                               <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"><i class="fa fa-clock-o"></i> Full Time </span> <span class="type-work full-time"><i class="fa fa-clock-o"></i> 6 hours ago</span> 
                               
                               <!-- Apply Now -->
-                              <div class="aply"> <a href="companies-detail.html#." class="btn">Apply Now</a> </div>
+                              <div class="aply"> <a href=" #." class="btn">Apply Now</a> </div>
                             </div>
                           </div>
                         </div>
@@ -494,7 +467,7 @@
                         <!-- Job Board Companies -->
                         <div class="listing-ver-3 margin-bottom-0">
                           <div class="listing-heading">
-                            <h5><a href="companies-detail.html#.">Creative UI/UX Designer</a></h5>
+                            <h5><a href=" #.">Creative UI/UX Designer</a></h5>
                           </div>
                           <div class="listing-inner">
                             <div class="listing-content">
@@ -502,7 +475,7 @@
                               <span class="location"> <i class="fa fa-map-marker"></i> Manhattan, New york, USA </span> <span class="type-work full-time"><i class="fa fa-clock-o"></i> Full Time </span> <span class="type-work full-time"><i class="fa fa-clock-o"></i> 6 hours ago</span> 
                               
                               <!-- Apply Now -->
-                              <div class="aply"> <a href="companies-detail.html#." class="btn">Apply Now</a> </div>
+                              <div class="aply"> <a href=" #." class="btn">Apply Now</a> </div>
                             </div>
                           </div>
                         </div>
@@ -563,7 +536,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
                             
                             <!-- Follows -->
@@ -572,7 +545,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
                             
                             <!-- Follows -->
@@ -581,7 +554,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Follow</a></div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a></div>
                             </li>
                             
                             <!-- Follows -->
@@ -590,7 +563,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
                             
                             <!-- Follows -->
@@ -599,7 +572,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
                             
                             <!-- Follows -->
@@ -608,7 +581,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Follow</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Follow</a> </div>
                             </li>
                           </ul>
                         </div>
@@ -631,7 +604,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
                             
                             <!-- Following -->
@@ -640,7 +613,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
                             
                             <!-- Following -->
@@ -649,7 +622,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
                             
                             <!-- Following -->
@@ -658,7 +631,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
                             
                             <!-- Following -->
@@ -667,7 +640,7 @@
                                 <div class="thumb"> <img src="images/comp-img.png" alt="" class="img-responsive"> </div>
                                 <h4>Webicode</h4>
                                 <p> <span>Member Since:</span> March 2019</p>
-                                <a href="companies-detail.html#." class="btn btn-inverse"> Following</a> </div>
+                                <a href=" #." class="btn btn-inverse"> Following</a> </div>
                             </li>
                           </ul>
                         </div>
@@ -701,7 +674,7 @@
                 <p>Projects</p>
               </li>
             </ul>
-            <a href="companies-detail.html#." class="btn">Find a Jobs</a> </div>
+            <a href=" #." class="btn">Find a Jobs</a> </div>
         </div>
       </div>
       <div class="clearfix"></div>

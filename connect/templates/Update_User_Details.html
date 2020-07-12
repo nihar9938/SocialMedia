@@ -1,9 +1,5 @@
 {% extends 'base.html' %}
-
 {% load static %}
-
-
-
 {% block body %}
   <!-- Content -->
   <div id="content">
@@ -20,22 +16,10 @@
               <div class="">
                 <div class="user-in">
                   <div class="pro-avatar"> <img src="{{ Profile.image.url }}" height="200" alt="" class="img-responsive" > </div>
-                  <h1>{{ Profile.name }} <a class="veri" href="#." data-toggle="tooltip" data-placement="top" title="Verified Member"> <i class="fa fa-check"></i> </a> </h1>
+                  <h1>{{ Profile.name }}  </a> </h1>
                   <h6>Professional Designer and Front-end developer</h6>
-                  <div class="social-links"> <a href="#."><i class="fab fa-facebook-f"></i></a> <a href="#."><i class="fab fa-twitter"></i></a> <a href="#."><i class="fab fa-google"></i></a> <a href="#."><i class="fab fa-linkedin-in"></i></a> <a href="#."><i class="far fa-bookmark"></i> </a> <a href="#."><i class="far fa-envelope"></i> </a> <a href="#." class="float-right margin-right-0" data-toggle="tooltip" data-placement="top" title="Reports"><i class="fa fa-exclamation"></i> </a> </div>
 
-                  <!-- Followers -->
-                  <div class="followr">
-                    <ul class="row">
-                      <li class="col-sm-6">
-                        <p>Followers <span>(512)</span></p>
-                      </li>
-                      <li class="col-sm-6">
-                        <p>Following <span>(1874)</span></p>
-                      </li>
-                    </ul>
                   </div>
-                </div>
               </div>
             </div>
           </div>
@@ -101,30 +85,16 @@
                           <ul class="single-category">
                             <li>
                               <h6 class="title">Name</h6>
-                              <span class="subtitle">Adnan</span> </li>
-                            <li>
-                              <h6 class="title">Age</h6>
-                              <span class="subtitle">23 Years</span> </li>
-                            <li>
-                              <h6 class="title">Location</h6>
-                              <span class="subtitle">Melbourne, Australia</span> </li>
-                            <li>
-                              <h6 class="title">Experiance</h6>
-                              <span class="subtitle">8 Years</span> </li>
-                            <li>
-                              <h6 class="title">Degree</h6>
-                              <span class="subtitle">MultiMedia Arts (NCA)</span> </li>
+                              <span class="subtitle">{{ Profile.name }}</span> </li>
+
                             <li>
                               <h6 class="title">Phone</h6>
-                              <span class="subtitle">00971 548 2808</span> </li>
+                              <span class="subtitle">{{ Profile.number }}</span> </li>
                             <li>
                               <h6 class="title">Email</h6>
-                              <div class="subtitle"><a href="#.">adnan@webicode.com</a> </div>
+                              <div class="subtitle"><a href="#.">{{ Profile.email }}</a> </div>
                             </li>
-                            <li>
-                              <h6 class="title">Website</h6>
-                              <div class="subtitle"> <a href="https://webicode.com" target="_blank">https://webicode.com</a> </div>
-                            </li>
+
                           </ul>
                         </div>
                       </div>
@@ -248,63 +218,5 @@
     </section>
 
     <!-- WHAT OUR USERS SAY -->
-    <section class="bg-white padding-top-100 padding-bottom-100">
-      <div class="container">
-
-        <!-- Heading Block -->
-        <div class="heading-block text-center">
-          <h2>Review About Muhammad Adnan Arif</h2>
-        </div>
-
-        <!-- Testimonial Style 4 -->
-        <div class="testimonial style-4">
-          <div class="testi">
-            <!-- Testi Slides With Image -->
-            <div class="testi-slide">
-
-              <!-- Slides -->
-              <div>
-                <!-- Avatar -->
-                <div class="avatar"><img class="img-circle img-responsive" src="{% static 'images/testimonial-2a.png' %}" alt=" "></div>
-                <div class="text-in">
-                  <p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
-                    or randomised words which don't look even slightly believable.” </p>
-                  <h6>WHITE SHADOW WALKER</h6>
-                  <span> CEO/FOUNDER DELL</span>
-                  <!-- Stars -->
-                  <div class="rating-stars"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></div>
-                </div>
-              </div>
-
-              <!-- Slides -->
-              <div>
-                <!-- Avatar -->
-                <div class="avatar"><img class="img-circle img-responsive" src="{% static 'images/testimonial-2b.png' %}" alt=" "></div>
-                <div class="text-in">
-                  <p>“There are many variations  but the majority have suffered alteration. but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”</p>
-                  <h6>M_ADNAN</h6>
-                  <span> CEO/FOUNDER DELL</span>
-                  <!-- Stars -->
-                  <div class="rating-stars"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></div>
-                </div>
-              </div>
-
-              <!-- Slides 1 -->
-              <div>
-                <!-- Avatar -->
-                <div class="avatar"><img class="img-circle img-responsive" src="{% static 'images/testimonial-2c.png' %}" alt=" "></div>
-                <div class="text-in">
-                  <p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, Alteration in some form randomised words which don't look even slightly believable.”</p>
-                  <h6>DAVID WALKER</h6>
-                  <span> CEO/FOUNDER DELL</span>
-                  <!-- Stars -->
-                  <div class="rating-stars"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
     {% endblock %}

@@ -46,16 +46,16 @@
 
       <!-- Logo -->
 
-      <div class="logo"> <a href="{% url 'login' %}"><img class="img-responsive" src="{%  static 'images/logo-dark.png' %}" alt="" ></a> </div>
+      <div class="logo"> <a href="{% url 'front' %}"><img class="img-responsive" src="{%  static 'images/logo-dark.png' %}" alt="" ></a> </div>
       <nav class="navbar ownmenu navbar-expand-lg" id="nav-resposive">
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse" id="navbarNav" data-parent="#nav-resposive">
           <ul class="nav">
-            <li class="active"> <a href="{% url 'login' %}">Home</a> </li>
+            <li class="active"> <a href="{% url 'front' %}">Home</a> </li>
             <li class=""> <a href="{% url 'professional' 'all' %}">Connections</a> </li>
-            <li class=""> <a href="{% url 'CompanyDetails' %}">Companies</a> </li>
-            <li class=""> <a href="">Jobs</a> </li>
-            <li class=""> <a href=""> Contact</a> </li>
+            <li class=""> <a href="{% url 'companies' %}">Companies</a> </li>
+            <li class=""> <a href="{% url 'contact' %}">Contacts</a> </li>
+            <li class=""> <a href="{% url 'logout' %}"> Logout</a> </li>
           </ul>
         </div>
 
@@ -65,11 +65,11 @@
           <div class="collapse navbar-collapse navbar-expand-lg" id="socialNav" data-parent="#nav-resposive">
             <div class="social_icons">
               <ul>
-                <li><a href="#."><i class="fab fa-whatsapp"></i></a></li>
-                <li><a href="#."><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#."><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#."><i class="fab fa-google-plus-g"></i></a></li>
-                <li><a href="#."><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://web.whatsapp.com"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://gmail.com"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="https://www.linkedin.com"><i class="fab fa-linkedin-in"></i></a></li>
                 <li><a href="{% url 'logout' %}"><i class="fa fa-lock-open"></i></a></li>
 
               </ul>
@@ -104,12 +104,12 @@
                   <h3 class="block-title">Latest Companies</h3>
                   <div class="block-content">
                     <ul>
-                      <li> <a href="professional-details.html#."> <img src="{%  static 'images/company-img-1.jpg' %}" alt="" class="img-responsive"> Webicode</a></li>
-                      <li> <a href="professional-details.html#."> <img src="{%  static 'images/company-img-2.jpg' %}" alt="" class="img-responsive"> Webicode</a></li>
-                      <li> <a href="professional-details.html#."> <img src="{%  static 'images/company-img-3.jpg' %}" alt="" class="img-responsive"> Webicode</a></li>
-                      <li> <a href="professional-details.html#."> <img src="{%  static 'images/company-img-4.jpg' %}" alt="" class="img-responsive"> Webicode</a></li>
-                      <li> <a href="professional-details.html#."> <img src="{%  static 'images/company-img-5.jpg' %}" alt="" class="img-responsive"> Webicode</a></li>
-                      <li> <a href="professional-details.html#."> <img src="{%  static 'images/company-img-6.jpg' %}" alt="" class="img-responsive"> Webicode</a></li>
+                      <li> <a href="#."> <img src="{%  static 'images/company-img-1.jpg' %}" alt="" class="img-responsive"> SIF</a></li>
+                      <li> <a href="#."> <img src="{%  static 'images/company-img-2.jpg' %}" alt="" class="img-responsive"> TechSim+</a></li>
+                      <li> <a href="#."> <img src="{%  static 'images/company-img-3.jpg' %}" alt="" class="img-responsive"> TCS</a></li>
+                      <li> <a href="#."> <img src="{%  static 'images/infosys.jpg' %}" alt="" class="img-responsive"> Infosys</a></li>
+                      <li> <a href="#."> <img src="{%  static 'images/cog.png' %}" alt="" class="img-responsive"> Cognizant</a></li>
+                      <li> <a href="#."> <img src="{%  static 'images/capgemini.jpg' %}" alt="" class="img-responsive"> Capgemini</a></li>
                     </ul>
                   </div>
                 </div>
@@ -121,18 +121,18 @@
                   <h3 class="block-title"><span>Usefull Links</span></h3>
                   <div class="block-content">
                     <ul>
-                      <li><a href="professional-details.html#.">Theme Features</a></li>
-                      <li><a href="professional-details.html#.">Page Builder</a></li>
-                      <li><a href="professional-details.html#.">Privacy Policy</a></li>
-                      <li><a href="professional-details.html#.">Shop Rules</a></li>
-                      <li><a href="professional-details.html#.">Services</a></li>
-                      <li><a href="professional-details.html#.">Gallery Layout</a></li>
-                      <li><a href="professional-details.html#.">Theme Features</a></li>
-                      <li><a href="professional-details.html#.">Page Builder</a></li>
-                      <li><a href="professional-details.html#.">Privacy Policy</a></li>
-                      <li><a href="professional-details.html#.">Shop Rules</a></li>
-                      <li><a href="professional-details.html#.">Services</a></li>
-                      <li><a href="professional-details.html#.">Gallery Layout</a></li>
+                      <li><a href="#.">Theme Features</a></li>
+                      <li><a href="#.">Page Builder</a></li>
+                      <li><a href="#.">Privacy Policy</a></li>
+                      <li><a href="#.">Shop Rules</a></li>
+                      <li><a href="#.">Services</a></li>
+                      <li><a href="#.">Gallery Layout</a></li>
+                      <li><a href="#.">Theme Features</a></li>
+                      <li><a href="#.">Page Builder</a></li>
+                      <li><a href="#.">Privacy Policy</a></li>
+                      <li><a href="#.">Shop Rules</a></li>
+                      <li><a href="#.">Services</a></li>
+                      <li><a href="#.">Gallery Layout</a></li>
                     </ul>
                   </div>
                 </div>
@@ -165,16 +165,16 @@
           <div class="container">
             <div class="row">
               <div class="col-md-6 copyright">
-                <p>&copy; 2019 HTML5 Template. DESIGNED BY <a href="https://webicode.com/"> WEBICODE</a></p>
+                <p>&copy; Designed by  <a href=""> Nihar</a></p>
               </div>
               <div class="col-md-6 social-links">
                 <ul class="right">
-                  <li><a href="professional-details.html#."><i class="fab fa-facebook"></i></a></li>
-                  <li><a href="professional-details.html#."><i class="fab fa-twitter"></i></a></li>
-                  <li><a href="professional-details.html#."><i class="fab fa-dribbble"></i></a></li>
-                  <li><a href="professional-details.html#."><i class="fab fa-behance"></i></a></li>
-                  <li><a href="professional-details.html#."><i class="fab fa-pinterest"></i></a></li>
-                  <li><a href="professional-details.html#."><i class="fab fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                  <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                  <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                  <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
                 </ul>
               </div>
             </div>

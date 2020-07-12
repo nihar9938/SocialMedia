@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Banner -->
+    <section class="sub-bnr">
+      <div class="container">
+        <h2>Top Popular Companies</h2>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href=" #">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Companies</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    
+
+      <!-- Papular Professionals -->
+    <main class="cd-main-content">
+      <section class="padding-top-100">
+        <div class="container"> 
+          
+          <!-- filter -->
+          <div class="cd-tab-filter-wrapper filter-wrapper">
+            <div class="cd-tab-filter"> 
+              
+              <!-- filter Btns -->
+              <ul class="cd-filters">
+                <li class="placeholder"> <a data-type="all" href="#">All</a> </li>
+                <li class="filter"><a class="selected" href="#" data-type="all">All</a></li>
+<!--                <li class="filter" data-filter=".companies"><a href="#" data-type="companies">Companies</a></li>-->
+<!--                <li class="filter" data-filter=".coporate"><a href="#" data-type="coporate">Coporate</a></li>-->
+<!--                <li class="filter" data-filter=".info-tech"><a href="# data-type="info-tech">Infomation Technology</a></li>-->
+<!--                <li class="filter" data-filter=".indiviual"><a href="#" data-type="indiviual">Indiviual</a></li>-->
+<!--                <li class="filter" data-filter=".freelancer"><a href="#" data-type="freelancer">Freelance</a></li>-->
+<!--                <li class="filter" data-filter=".agency"><a href="#" data-type="agency">Agency</a></li>-->
+              </ul>
+              
+              <!-- Search -->
+              <div class="filter-search"> <a class="fltr-srch collapsed" data-toggle="collapse" href=" #filter-detail" role="button" aria-expanded="false" aria-controls="collapseExample"> Advance Search <i class="fa fa-filter"></i> </a> 
+                
+                <!-- Filter Details -->
+                <div class="inside-from">
+                  <div class="collapse" id="filter-detail">
+                    <div class="card">
+                      <form>
+                        <ul>
+                          <!-- Company Name -->
+                          <li>
+                            <label>
+                              <input type="search" class="form-control" placeholder="Company Name">
+                            </label>
+                          </li>
+                          <!-- City -->
+                          <li>
+                            <label>
+                              <input type="text" class="form-control" placeholder="City">
+                            </label>
+                          </li>
+                          <!-- Select -->
+                          <li>
+                            <label>
+                              <select class="form-control">
+                                <option>Companies</option>
+                                <option>Coporate</option>
+                                <option>Indiviual</option>
+                                <option>Freelance</option>
+                                <option>Agency</option>
+                              </select>
+                            </label>
+                          </li>
+                          <li>
+                            <button type="submit" class="btn">Search</button>
+                          </li>
+                        </ul>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Comapnies Iteam -->
+          <section class="cd-gallery">
+            <ul>
+              {% for companies in companies %}
+              <!-- Comapany List -->
+              <li class="mix  coporate info-tech indiviual freelancer ">
+                <div class="com-inside">
+                  <div class="img-sec"> <img src="{{ companies.logo.url }}" class="img-responsive" alt="" >
+                    <div class="hover-over">
+                      <div class="position-center-center"> <a href=" #" class="btn">Follow</a> <a href="{% url 'CompanyDetails' companies.id %}" class="btn">Details</a> </div>
+                    </div>
+                  </div>
+                  <div class="txt-sec">
+                    <h5><a href="companies-detail.html"> {{ companies.name }} </a></h5>
+                  </div>
+                </div>
+              </li>
+              {% endfor %}
+              <!-- Comapany List -->
+            </ul>
+            <div class="clearfix"></div>
+            
+            <!-- Btn Center -->
+            <div class="btn-center margin-top-30 margin-bottom-100 text-center"> <a href=" #." class="btn btn-inverse">View More</a> </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+  </div>
+{% endblock %}
