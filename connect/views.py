@@ -65,6 +65,8 @@ def Register(request):
             print(msg)
             Sendmailold(email,msg)
             return redirect('login')
+            error = True
+    return HttpResponse("Register Your Self")
 
 
 
